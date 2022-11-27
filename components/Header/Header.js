@@ -5,7 +5,10 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles["login-signup"]}>LOGİN SIGNUP</div>
+        <div className={styles["login-signup"]}>
+          <Link href="/login">Login</Link>
+          <Link href="/signup">Sign Up</Link>
+        </div>
         <nav className={styles.container}>
           <ul className={styles["header-list"]}>
             <li>

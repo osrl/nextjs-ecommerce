@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Main</h1>
+        <h1>Home</h1>
       </main>
     </div>
   );
