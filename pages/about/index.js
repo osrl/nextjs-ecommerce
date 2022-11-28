@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./contact.module.scss";
+import styles from "./about.module.scss";
 
-const contact = () => {
+const about = () => {
   return (
     <>
       <div className={styles["about"]}>
@@ -80,4 +80,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default about;
