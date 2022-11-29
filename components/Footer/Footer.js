@@ -8,7 +8,6 @@ const Footer = () => {
         <div className={styles.container}>
           <div className={styles["footer-input"]}>
             <h2>E-Commercion</h2>
-            <input type="text" />
           </div>
           <div className={styles["footer-categories"]}>
             <h4>Categories</h4>

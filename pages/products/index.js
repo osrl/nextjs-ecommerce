@@ -3,16 +3,19 @@ import Image from "next/image";
 import styles from "./products.module.scss";
 
 const products = ({ products }) => {
-  const [allProducts, setAllProducts] = useState(products);
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleSearchChange = (e) => {
+    console.log(e.target.value);
     setSelectedCategory(e.target.value);
   };
 
-  const filteredProducts = products.filter((product) => {
-    return product.category.includes(selectedCategory);
-  });
+  const filteredProducts =
+    selectedCategory === "all"
+      ? products
+      : products.filter((product) => {
+          return product.category.includes(selectedCategory);
+        });
 
   return (
     <>
@@ -21,6 +24,9 @@ const products = ({ products }) => {
           <div className={styles["products-header"]}>
             <h3>Products List</h3>
             <select onChange={handleSearchChange}>
+              <option className="option" value="all">
+                All
+              </option>
               <option className="option" value="men's clothing">
                 Men Clothing
               </option>

@@ -24,7 +24,6 @@ const Header = () => {
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
-          <input type="text" />
         </nav>
       </header>
     </>
