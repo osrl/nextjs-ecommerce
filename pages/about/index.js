@@ -11,7 +11,7 @@ const about = () => {
             <div className={styles["about-left"]}>
               <Image
                 src="/images/aboutus.png"
-                alt="Contact us picture"
+                alt="About"
                 width={400}
                 height={300}
               />
@@ -32,7 +32,12 @@ const about = () => {
             <h3>Our Features</h3>
             <div className={styles["features-cards"]}>
               <div className={styles["features-card"]}>
-                <Image src="/images/free-delivery.png" width={65} height={65} />
+                <Image
+                  src="/images/free-delivery.png"
+                  width={65}
+                  height={65}
+                  alt="Free Delivery"
+                />
 
                 <h5>Free Delivery</h5>
                 <p>
@@ -41,7 +46,12 @@ const about = () => {
                 </p>
               </div>
               <div className={styles["features-card"]}>
-                <Image src="/images/cashback.png" width={65} height={65} />
+                <Image
+                  src="/images/cashback.png"
+                  width={65}
+                  height={65}
+                  alt="Cash Back"
+                />
                 <h5>100% Cash Back</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
@@ -53,6 +63,7 @@ const about = () => {
                   src="/images/premium-quality.png"
                   width={65}
                   height={65}
+                  alt="Quality Product"
                 />
                 <h5>Quality Product</h5>
                 <p>
@@ -65,6 +76,7 @@ const about = () => {
                   src="/images/24-hours-support.png"
                   width={65}
                   height={65}
+                  alt="24/7 Support"
                 />
                 <h5>24/7 Support</h5>
                 <p>

@@ -25,7 +25,12 @@ const contact = () => {
           </div>
         </div>
         <div className={styles["contact-right"]}>
-          <Image src="/images/contact.png" width={450} height={400} />
+          <Image
+            src="/images/contact.png"
+            width={450}
+            height={400}
+            alt="Contact image"
+          />
         </div>
       </div>
     </div>

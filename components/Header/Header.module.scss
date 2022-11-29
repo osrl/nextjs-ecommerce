@@ -1,6 +1,10 @@
 .header {
   width: 100%;
   font-weight: 500;
+  box-shadow: 0px 0px 25px 5px rgba(black, 0.03);
+  @media screen and (max-width: 992px) {
+    padding: 10px 0;
+  }
 }
 .login-signup {
   width: 100%;
