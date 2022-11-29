@@ -1,14 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import LoginHeader from "./LoginHeader";
+//import { useUser } from "@auth0/nextjs-auth0";
 import styles from "./Header.module.scss";
 const Header = () => {
+  // const { user, error, isLoading } = useUser();
+
   return (
     <>
       <header className={styles.header}>
-        <div className={styles["login-signup"]}>
-          <Link href="/login">Login</Link>
-          <Link href="/signup">Sign Up</Link>
-        </div>
+        <LoginHeader />
         <nav className={styles.container}>
           <ul className={styles["header-list"]}>
             <li>
@@ -25,7 +26,7 @@ const Header = () => {
             </li>
           </ul>
           <div>
-            <button>
+            <Link href="/shoppingcart">
               <svg
                 width="22"
                 height="22"
@@ -46,7 +47,7 @@ const Header = () => {
                   fill="#535399"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </nav>
       </header>
