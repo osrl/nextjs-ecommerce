@@ -1,11 +1,14 @@
+import { UserProvider } from "@auth0/nextjs-auth0";
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <UserProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </UserProvider>
   );
 }
 
