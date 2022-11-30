@@ -33,11 +33,20 @@
         }
         ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             list-style: none;
-            &:nth-child(1) {
+            li {
                 flex: 1;
+            }
+            li:nth-child(1) {
+                flex: 2;
+            }
+        }
+
+        .basket-product {
+            .item {
+                display: flex;
             }
         }
     }

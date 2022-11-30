@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./shoppingcart.module.scss";
 
 const shoppingcart = () => {
@@ -13,6 +14,7 @@ const shoppingcart = () => {
             <li>Total</li>
           </ul>
         </div>
+
         <div className={styles["shoppingCart-total"]}>asdasd</div>
       </div>
     </div>

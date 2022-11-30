@@ -13,16 +13,24 @@ const Header = () => {
         <nav className={styles.container}>
           <ul className={styles["header-list"]}>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className={styles["header-a"]}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/products">Products</Link>
+              <Link href="/products" className={styles["header-a"]}>
+                Products
+              </Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/about" className={styles["header-a"]}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" className={styles["header-a"]}>
+                Contact
+              </Link>
             </li>
           </ul>
           <div>
