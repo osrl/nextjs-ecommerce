@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./products.module.scss";
+import Link from "next/link";
 
 const products = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -53,7 +54,12 @@ const products = ({ products }) => {
                   />
                 </div>
                 <div className={styles["products-card-right"]}>
-                  <h4>{filteredProduct.title}</h4>
+                  <Link
+                    href={`products/${filteredProduct.id}`}
+                    className={styles["link-href"]}
+                  >
+                    {filteredProduct.title}
+                  </Link>
                   <h4>{filteredProduct.category}</h4>
                   <span>Price: {filteredProduct.price}</span>
                   <p>{filteredProduct.description}</p>
