@@ -1622,6 +1622,11 @@
   "resolved" "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz"
   "version" "6.1.0"
 
+"notiflix@^3.2.5":
+  "integrity" "sha512-eMoMlT6gRl6RmO7N23j4APhxSYpYyNRV4T6qF11f3Yh3GMd/GKOdEZ+q/q1crUsZBg0f9EEfTXxLE3A/T3Cu9Q=="
+  "resolved" "https://registry.npmjs.org/notiflix/-/notiflix-3.2.5.tgz"
+  "version" "3.2.5"
+
 "object-assign@^4.1.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
   "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"

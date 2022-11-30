@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./products.module.scss";
 import Link from "next/link";
+import Notiflix from "notiflix";
 
 const products = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -17,6 +18,11 @@ const products = ({ products }) => {
       : products.filter((product) => {
           return product.category.includes(selectedCategory);
         });
+
+  useEffect(() => {
+    Notiflix.Loading.standard();
+    Notiflix.Loading.remove();
+  }, [filteredProducts]);
 
   return (
     <>
