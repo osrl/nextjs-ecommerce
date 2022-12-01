@@ -40,11 +40,16 @@ const Shoppingcart = () => {
                 <li>Total</li>
               </ul>
 
-              {cart.map((item) => (
-                <div className={styles["product-item-detail"]}>
+              {cart.map((item, index) => (
+                <div key={index} className={styles["product-item-detail"]}>
                   <div className={styles["product-item"]}>
                     <div className={styles["product-item-image"]}>
-                      <Image src={item.image} width={70} height={70} />
+                      <Image
+                        src={item.image}
+                        width={70}
+                        height={70}
+                        alt="Shopping cart item"
+                      />
                     </div>
                     <div className={styles["product-item-description"]}>
                       <h6>{item.title}</h6>
