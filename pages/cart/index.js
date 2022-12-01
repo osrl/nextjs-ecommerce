@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
 } from "../../redux/cart.slice";
-
+import Notiflix from "notiflix";
 import styles from "./shoppingcart.module.scss";
 
 const Shoppingcart = () => {
@@ -18,6 +19,11 @@ const Shoppingcart = () => {
       0
     );
   };
+
+  useEffect(() => {
+    Notiflix.Loading.standard();
+    Notiflix.Loading.remove();
+  }, [cart]);
 
   // return (
   //   <div>
@@ -76,7 +82,7 @@ const Shoppingcart = () => {
                 <div className={styles["product-item-detail"]}>
                   <div className={styles["product-item"]}>
                     <div className={styles["product-item-image"]}>
-                      <h6>Image</h6>
+                      <Image src={item.image} width={70} height={70} />
                     </div>
                     <div className={styles["product-item-description"]}>
                       <h6>{item.title}</h6>
@@ -84,20 +90,28 @@ const Shoppingcart = () => {
                   </div>
                   <div className={styles["product-item-description-texts"]}>
                     <span>{item.price}</span>
-                    <button
-                      onClick={() => dispatch(incrementQuantity(item.id))}
+                    <div
+                      className={
+                        styles["product-item-description-texts-buttons"]
+                      }
                     >
-                      +
-                    </button>
-                    <button
-                      onClick={() => dispatch(decrementQuantity(item.id))}
-                    >
-                      -
-                    </button>
-                    <button onClick={() => dispatch(removeFromCart(item.id))}>
-                      x
-                    </button>
-                    <span>{item.quantity * item.price}</span>
+                      <button
+                        onClick={() => dispatch(incrementQuantity(item.id))}
+                      >
+                        +
+                      </button>
+                      <button
+                        onClick={() => dispatch(decrementQuantity(item.id))}
+                      >
+                        -
+                      </button>
+                      <button onClick={() => dispatch(removeFromCart(item.id))}>
+                        x
+                      </button>
+                    </div>
+                    <span>
+                      {item.quantity} : {item.quantity * item.price}
+                    </span>
                   </div>
                 </div>
               ))}

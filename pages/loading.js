@@ -1,7 +1,23 @@
 import React from "react";
+import styles from "../styles/globals.module.css";
 
-const Loading = () => {
-  return <h5>Loading...</h5>;
-};
-
-export default Loading;
+export default function Loading() {
+  return (
+    <div className={styles.spinnerWrapper}>
+      <div className={styles.spinner}>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  );
+}

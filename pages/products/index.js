@@ -8,6 +8,7 @@ import styles from "./products.module.scss";
 
 const products = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
+  const dispatch = useDispatch();
 
   const handleSearchChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -25,7 +26,6 @@ const products = ({ products }) => {
     Notiflix.Loading.remove();
   }, [filteredProducts]);
 
-  const dispatch = useDispatch();
   return (
     <>
       <div className={styles["products"]}>
