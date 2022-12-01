@@ -25,44 +25,6 @@ const Shoppingcart = () => {
     Notiflix.Loading.remove();
   }, [cart]);
 
-  // return (
-  //   <div>
-  //     {cart.length === 0 ? (
-  //       <h1>Your Cart is Empty!</h1>
-  //     ) : (
-  //       <>
-  //         <div>
-  //           <div></div>
-  //           <div>Product</div>
-  //           <div>{cart.price}</div>
-  //           <div>Quantity</div>
-  //           <div>Actions</div>
-  //           <div>Total Price</div>
-  //         </div>
-  //         {cart.map((item) => (
-  //           <div>
-  //             <p>{item.product}</p>
-  //             <p>$ {item.price}</p>
-  //             <p>{item.quantity}</p>
-  //             <div>
-  //               <button onClick={() => dispatch(incrementQuantity(item.id))}>
-  //                 +
-  //               </button>
-  //               <button onClick={() => dispatch(decrementQuantity(item.id))}>
-  //                 -
-  //               </button>
-  //               <button onClick={() => dispatch(removeFromCart(item.id))}>
-  //                 x
-  //               </button>
-  //             </div>
-  //             <p>$ {item.quantity * item.price}</p>
-  //           </div>
-  //         ))}
-  //         <h2>Grand Total: $ {getTotalPrice()}</h2>
-  //       </>
-  //     )}
-  //   </div>
-  // );
   return (
     <div className={styles["shoppingCart"]}>
       <div className={styles["container"]}>
