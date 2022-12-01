@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import LoginHeader from "./LoginHeader";
-//import { useUser } from "@auth0/nextjs-auth0";
 import styles from "./Header.module.scss";
-const Header = () => {
-  // const { user, error, isLoading } = useUser();
 
+const Header = () => {
   return (
     <>
       <header className={styles.header}>
@@ -34,7 +32,7 @@ const Header = () => {
             </li>
           </ul>
           <div>
-            <Link href="/shoppingcart">
+            <Link href="/cart">
               <svg
                 width="22"
                 height="22"

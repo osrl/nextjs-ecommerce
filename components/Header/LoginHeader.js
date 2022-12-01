@@ -1,12 +1,14 @@
-// import { User } from "@auth0/auth0-react";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Header.module.scss";
+import Notiflix from "notiflix";
 import { useUser } from "@auth0/nextjs-auth0";
 
 const LoginHeader = () => {
-  // console.log(user);
   const { user, error, isLoading } = useUser();
-  console.log(user);
+  useEffect(() => {
+    Notiflix.Loading.standard();
+    Notiflix.Loading.remove();
+  }, [user]);
 
   return user ? (
     <div className={styles["login-signup"]}>

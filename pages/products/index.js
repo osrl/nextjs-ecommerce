@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import styles from "./products.module.scss";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cart.slice";
 import Notiflix from "notiflix";
+import styles from "./products.module.scss";
 
 const products = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleSearchChange = (e) => {
-    console.log(e.target.value);
     setSelectedCategory(e.target.value);
   };
 
@@ -24,6 +25,7 @@ const products = ({ products }) => {
     Notiflix.Loading.remove();
   }, [filteredProducts]);
 
+  const dispatch = useDispatch();
   return (
     <>
       <div className={styles["products"]}>
@@ -69,7 +71,10 @@ const products = ({ products }) => {
                   <h4>{filteredProduct.category}</h4>
                   <span>Price: {filteredProduct.price}</span>
                   <p>{filteredProduct.description}</p>
-                  <div className={styles["products-svg"]}>
+                  <div
+                    className={styles["products-svg"]}
+                    onClick={() => dispatch(addToCart(filteredProduct))}
+                  >
                     <svg
                       width="22"
                       height="22"
